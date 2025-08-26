@@ -1,3 +1,5 @@
+package ch1_3;
+
 public class InputExamples {
 
     public static void printArguments(String[] args){
