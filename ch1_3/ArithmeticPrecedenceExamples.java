@@ -1,3 +1,5 @@
+package ch1_3;
+
 public class ArithmeticPrecedenceExamples {
     public static  void main(String[] args){
 //        int result = 1+ 5 % 3;

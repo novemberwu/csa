@@ -1,3 +1,5 @@
+package ch1_9;
+
 public class StackOverflowExample {
     public static void recursiveMethod() {
         recursiveMethod(); // 递归调用自身，没有终止条件

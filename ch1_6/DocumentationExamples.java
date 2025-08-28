@@ -1,3 +1,5 @@
+package ch1_6;
+
 public class DocumentationExamples {
     /**
      * This class represents a Documentation Examples

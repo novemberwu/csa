@@ -1,3 +1,5 @@
+package ch1_6;
+
 public class CompoundAssignmentExamples {
     public static void main(String[] args){
         int x = 1;

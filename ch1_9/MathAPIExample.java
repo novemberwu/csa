@@ -1,3 +1,5 @@
+package ch1_9;
+
 public class MathAPIExample {
     public static void main(String[] args){
         if(args.length < 2){
