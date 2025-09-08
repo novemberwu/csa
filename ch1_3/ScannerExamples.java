@@ -7,14 +7,15 @@ import java.util.Scanner;
 public class ScannerExamples {
     public static void main(String[] args){
         // example 1:
-        /*Scanner sc = new Scanner(System.in);
-        int i = sc.nextInt();
-        String i = sc.next();
-        System.out.println("Getting from input: " + i);*/
+//        Scanner sc = new Scanner(System.in);
+//        //int i = sc.nextInt();
+//        System.out.println("enter something");
+//        String i = sc.next();
+//        System.out.println("Getting from input: " + i);
 
 
         // example 2:
-        //scanFromFile();
+        scanFromFile();
 
         // exmample 3:
         //scanWithDelimiter();
@@ -42,6 +43,10 @@ public class ScannerExamples {
         Scanner sc = null;
         try {
             sc = new Scanner(new File("ch1_3/myNumbers"));
+            while (sc.hasNextLong()) {
+                long aLong = sc.nextLong();
+                System.out.println(aLong);
+            }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }finally {
@@ -49,9 +54,6 @@ public class ScannerExamples {
                 sc.close();
             }
         }
-        while (sc.hasNextLong()) {
-            long aLong = sc.nextLong();
-            System.out.println(aLong);
-        }
+
     }
 }

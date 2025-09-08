@@ -9,5 +9,10 @@ public class HelloNumbers {
         }
 
         System.out.println(((Object) x).getClass().getSimpleName());
+
+
+        String str = "Hello";
+        System.out.println(str.charAt(0));
+
     }
 }

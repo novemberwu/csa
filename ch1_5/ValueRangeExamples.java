@@ -8,8 +8,7 @@ public class ValueRangeExamples {
         int result = i + j;
         System.out.println(result);
 
-
-        System.out.println("Maximum double value: " + Double.MAX_VALUE);
-        System.out.println("Minimum positive double value: " + Double.MIN_VALUE);
+        //System.out.println("Maximum double value: " + Double.MAX_VALUE);
+        //System.out.println("Minimum positive double value: " + Double.MIN_VALUE);
     }
 }

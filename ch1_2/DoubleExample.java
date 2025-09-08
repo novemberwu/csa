@@ -1,7 +1,5 @@
 package ch1_2;
 
-import java.util.Currency;
-
 public class DoubleExample {
 
 
