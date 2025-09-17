@@ -12,5 +12,6 @@ public class ScannerFromStdIn {
         System.out.println("Please enter string:");
         String s = sc.next();
         System.out.println("Getting from input: " + i + " and "+ s);
+        sc.close();
     }
 }

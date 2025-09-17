@@ -20,8 +20,10 @@ public class StringEscapeExamples {
     This is the first line.
     This is the second line.
     And this is the third line.
+    this is 'test single quote' with multiple line
+    this is "test double quote" with multiple line
     """;
-       // System.out.println(multiLineString);
+        System.out.println(multiLineString);
 
 
     }
