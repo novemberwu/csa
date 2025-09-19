@@ -11,6 +11,9 @@ public class TwoDivide {
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
         //TODO: Your code here
+        //Once program reach here. a and b both are not 0
+        // if a % b == 0 or b % a == 0
+
 
     }
 }
