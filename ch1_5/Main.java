@@ -16,5 +16,9 @@ public class Main {
         System.out.println("welcomeGreeting: " + welcomeGreeting);
 
         /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */
+//        temperature = 75.8;
+//        welcomeGreeting = new String("Welcome to CSA");
+//        System.out.println("updated temperature: " + temperature);
+//        System.out.println("updated welcomeGreeting: " + welcomeGreeting);
     }
 }
