@@ -4,7 +4,6 @@ public class VariableRangeExamples {
 
     public static void main(String[] args ){
 
-
         int bigNumber = 2147483647;
         System.out.println("bigNumber: " + bigNumber);
         System.out.println(bigNumber + " plus 1: " + (bigNumber + 1));
@@ -19,7 +18,7 @@ public class VariableRangeExamples {
 
         /*ADD YOUR CODE HERE*/
         // Adding the following code
-        //System.out.println("bigNumber as double: " + (double)bigNumber);
-        //System.out.println(bigNumber + " (as double) plus 1: " + ((double)bigNumber + 1));
+        System.out.println("bigNumber as double: " + (double)bigNumber);
+        System.out.println(bigNumber + " (as double) plus 1: " + ((double)bigNumber + 1));
     }
 }

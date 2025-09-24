@@ -1,4 +1,4 @@
-package ch1_3;
+package ch1_4;
 
 public class InputExamples {
 
@@ -7,8 +7,6 @@ public class InputExamples {
             System.out.println("arguments: "+ arg);
         }
     }
-
-
 
     public static void main(String[] args){
        printArguments(args);
