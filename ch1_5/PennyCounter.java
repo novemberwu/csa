@@ -11,9 +11,9 @@ public class PennyCounter {
         System.out.println("$" + totalAsDouble);
 
         /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */
-        //PennyCounter myPennyCounter = new PennyCounter();
-        //int totalAsInt = myPennyCounter.getTotalPennies(totalAsDouble );
-        //System.out.println(totalAsInt + " pennies");
+        PennyCounter myPennyCounter = new PennyCounter();
+        int totalAsInt = myPennyCounter.getTotalPennies(totalAsDouble );
+        System.out.println(totalAsInt + " pennies");
 
     }
 }

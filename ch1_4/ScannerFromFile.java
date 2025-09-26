@@ -1,4 +1,4 @@
-package ch1_3;
+package ch1_4;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +15,7 @@ public class ScannerFromFile {
 
         try {
             // initialize scanner to read from a file
-            sc = new Scanner(new File("ch1_3/myNumbers"));
+            sc = new Scanner(new File("ch1_4/myNumbers"));
             // read from scanner until nothing left
             while (sc.hasNextLong()) {
                 long aLong = sc.nextLong();
