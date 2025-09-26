@@ -6,6 +6,8 @@ public class MathAPIExample {
             System.out.println("Please enter 2 numbers");
         }
 
+        System.out.println("start");
+
         // Parse coefficients from command line
         double b = Double.parseDouble(args[0]);
         double c = Double.parseDouble(args[1]);

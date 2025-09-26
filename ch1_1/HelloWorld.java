@@ -4,7 +4,7 @@ public class HelloWorld {
 
     //Print greeting messages to the names that are entered in stdIn
     public static void main(String[] args){
-        String a = args[0];
+        System.out.println("Hello World");
 
     }
 
