@@ -1,4 +1,4 @@
-package ch1_9;
+package ch1_11;
 
 public class MathAPIExample {
     public static void main(String[] args){
