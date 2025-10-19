@@ -8,5 +8,7 @@ public class MathPowerExample {
         System.out.println(Math.pow(2, -1));
 
         System.out.println(Math.pow(2, 0.5));
+
+        System.out.println(Math.pow(-1, 0.5));
     }
 }
