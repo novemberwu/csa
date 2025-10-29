@@ -26,6 +26,13 @@ public class StringManipulation {
         s = "to be or not to be";
         String t = s.substring(1,3);
         System.out.println(t);
-       
+
+        String email = "rachel.jing@hotmail.com";
+
+        int Randomnum1 = (int) (Math.random() * email.substring(0,email.indexOf('.')).length());
+
+        int Randomnum2 = (int) (Math.random() * (email.substring(email.indexOf('.') + 1,email.indexOf('@')).length() -2));
+
+
     }
 }
