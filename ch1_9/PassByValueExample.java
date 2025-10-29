@@ -22,10 +22,13 @@ public class PassByValueExample {
         int a = 1;
         int b = 2;
         swapPrimitives(a, b);
+        System.out.println("Additional print from main");
 
         System.out.println("After execution inside main");
         System.out.println(a);
         System.out.println(b);
+        
+        
 
 
     }
