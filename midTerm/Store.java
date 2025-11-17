@@ -1,5 +1,7 @@
 package midTerm;
 
+import java.sql.SQLSyntaxErrorException;
+
 public class Store {
     private static int count = 0;
     static {
@@ -10,10 +12,13 @@ public class Store {
     }
     private String storeName;
     public Store(){
-        this.storeName = "Default name";
+        storeName = "Default name";
+        System.out.println("Inside Store()");
+        count++;
     }
     public Store(String name){
         this.storeName = name;
+        count++;
     }
     public String getName(){
         return this.storeName;
@@ -26,6 +31,19 @@ public class Store {
     }
     public static void main(String[] args){
         System.out.println("Inside main");
-        System.out.println(Store.getCount() + " stores");
+
+        Store a = new Store();
+        Store b = new Store("Tmall");
+        Store c = new Store("JingDong");
+        Store d = new Store("Amazon");
+
+        System.out.println(Store.getCount());//4
+
+        System.out.println("a's name " + a.getName());
+        a.setName("Rachel's store ");
+        System.out.println("a's name "+ a.getName());
+
+
+
     }
 }
