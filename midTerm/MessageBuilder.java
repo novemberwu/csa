@@ -43,7 +43,7 @@ public class MessageBuilder {
         String result = new String();
         for(int i = 0 ; i < numWords; i++){
             result += this.message.substring(startIndex , startIndex + 1);
-            startIndex = this.message.indexOf(" ", startIndex + 1 ) + 1 ;
+            startIndex = this.message.indexOf(" ", startIndex  ) + 1 ;
         }
 
         return result;
