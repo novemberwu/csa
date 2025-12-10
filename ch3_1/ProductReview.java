@@ -7,38 +7,33 @@ public class ProductReview {
     private final String productId;
     private  String[] images;
 
-    private final static int IMAGE_SIZE = 10;
-
-    public ProductReview(int rating, String authorId, String productId){
-        this.rating = rating;
-        this.authorId = authorId;
-        this.productId = productId;
-
-        this.images = new String[IMAGE_SIZE];
-    }
-
-    public ProductReview(int rating, String authorId, String productId, String text){
-        this.rating = rating;
-        this.authorId = authorId;
-        this.productId = productId;
-        this.text = text;
-
-    }
-
     public int getRating(){
         return this.rating;
     }
 
+    public void setText(String t){
+        this.text = t;
+
+    }
+
     public String getText(){
-        return text;
+        return this.text;
     }
-    public void setText(String newText){
-        text = newText;
+
+    private final static int IMAGE_SIZE = 10;
+
+    public ProductReview(int rating, String authorId, String pid){
+        this.rating = rating;
+        this.authorId = authorId;
+        this.productId = pid;
+
+    }
+
+    public ProductReview(){
+        this.rating = 5;
+        this.authorId = "anonumous";
+        this.productId = "default value";
     }
 
 
-    public static void main(String[] args){
-        ProductReview r = new ProductReview(3, "rachel", "111");
-        System.out.println(r.rating);
-    }
 }

@@ -19,11 +19,7 @@ public class StopwatchClient {
         Insertion.sort(a);
         System.out.printf("\ninsertion sort : %.3f", timer1.elapsedTime());
 
-        Integer[] b = genArray(N);
 
-        timer1.reset();
-        ShellSort.shellSort(b);
-        System.out.printf("\nshell sort: %.3f", timer1.elapsedTime());
 
 
     }

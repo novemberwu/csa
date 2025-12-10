@@ -4,17 +4,23 @@ import java.util.UUID;
 
 public class ReviewClient {
     public static void main(String[] args){
+        Book book = new Book();
 
-        ProductReview pr = new ProductReview(4, "rachel", UUID.randomUUID().toString());
 
-        System.out.println(pr.getRating());
-        System.out.println(pr.getText());// expect get blank text;
 
-        pr.setText("This is a good product");
 
-        System.out.println(pr.getText());// will produce product review with the comments
+        ProductReview review = new ProductReview(5,"rachelwu","keyboard");
+        int r = review.getRating();
 
-        ProductReview pr1 = new ProductReview(5, "Rachel", "111", "Great");
+
+        System.out.println(r);
+
+        review.setText("This is great");
+        System.out.println(review.getText());
+
+
+
+
 
     }
 }

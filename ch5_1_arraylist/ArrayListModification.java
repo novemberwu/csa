@@ -16,6 +16,7 @@ public class ArrayListModification {
         Iterator<String> iterator = list.iterator();
         while (iterator.hasNext()) {
             String element = iterator.next();
+
             if (element.equals("B")) {
                 iterator.remove(); // Safe removal during iteration
             }
