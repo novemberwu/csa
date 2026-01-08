@@ -49,7 +49,7 @@ public class ArrayListModification {
         System.out.println("List after attempted modification: " + names);
     }
     public static void main(String[] args){
-        arrayListPitfallExample1();
+        arrayListPitfallExample2();
 
     }
 

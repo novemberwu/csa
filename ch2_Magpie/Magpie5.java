@@ -1,7 +1,58 @@
 package ch2_Magpie;
 
-public class Magpie3
+public class Magpie5
 {
+    // modify this method to create an array of random responses
+
+    String[] randomResponse = {
+            "Interesting.",
+            "Okay.",
+            "I haven't heard that before.",
+            "What else could you tell me about that?",
+            "Where did you hear that?",
+            "Please go on."
+    };
+
+
+
+    String teacherName = "Rachel";
+    String[] studentNames = {"William", "Jason", "Jerry", "Eurus", "Leo", "Charlie"};
+    private String getRandomResponse()
+    {
+        final int NUMBER_OF_RESPONSES = 6;
+        int whichResponse = (int)(Math.random() * NUMBER_OF_RESPONSES);
+        String response = randomResponse[whichResponse];
+
+        return response;
+    }
+
+    private String transformTeacherStatement(String statement){
+        int index = findPhrase(statement, teacherName, 0);
+
+        int size = studentNames.length;
+
+        if(index >=0){
+            String student = studentNames[(int)(Math.random() * size)];
+            return "Oh,you're in Mrs. "+teacherName+"'s class! Do you know " +student + "?";
+
+        }
+        return null;
+
+    }
+
+    private String transformIDontLikeStatement(String statement)
+    {
+        String lastChar = statement.substring(statement.length() - 1);
+        if (lastChar.equals("."))
+        {
+            statement = statement.substring(0, statement.length() - 1);
+        }
+        int position = findPhrase (statement, "I dislike", 0);
+        String restOfStatement = statement.substring(position + 9);
+        return "You said, 'I dislike" + restOfStatement +
+                "'? What don't you like about it?";
+    }
+
     /**
      * Take a statement with "I want ." and transform it
      * into "I would like , too!"
@@ -11,18 +62,16 @@ public class Magpie3
      */
     private String transformIWantStatement(String statement)
     {
-        // Your code for Activity 3 Part b goes here
-        String goal = "I want";
-        String something = "";
-        int pos = findPhrase(statement, goal, 0);
-        if(pos >=0){
-            something = statement.substring(pos + goal.length());
-
-            return "I would like"+ something + ", too!";
-
+        String lastChar = statement.substring(statement.length() - 1);
+        if (lastChar.equals("."))
+        {
+            statement = statement.substring(0, statement.length() - 1);
         }
-        return ""; // Modify this statement to return the correct String
+        int position = findPhrase (statement, "I want", 0);
+        String restOfStatement = statement.substring(position + 6);
+        return "I would like" + restOfStatement + ", too!";
     }
+
 
 
     /**
@@ -35,19 +84,18 @@ public class Magpie3
      */
     private String transformWouldYouLikeStatement(String statement)
     {
-        // Your code for Activity 3 Part c goes here
-        String goal1 = "would you like";
-        String goal2 = "with me";
-        String s = statement.toLowerCase();
-        int pos1 = findPhrase(s, goal1, 0);
-        int pos2 = findPhrase(s, goal2, 0);
-        if( pos1 >=0 && pos2 >=0 && pos1 < pos2){
-            String something = statement.substring(pos1 + goal1.length(), pos2);
-            return "When would you like me to" + something + " with you?";
+        String lastChar = statement.substring(statement.length() - 1);
+        if (lastChar.equals("?"))
+        {
+            statement = statement.substring(0, statement.length() - 1);
         }
-
-        return ""; // Modify this statement to return the correct String
+        int position = findPhrase (statement, "Would you like ", 0);
+        String restOfStatement = statement.substring(position + 15);
+        position = findPhrase(restOfStatement, "with me", 0);
+        restOfStatement = restOfStatement.substring(0, position);
+        return "When would you like me" + restOfStatement + " with you?";
     }
+
 
 
     /**
@@ -80,6 +128,13 @@ public class Magpie3
         else if (findPhrase(statement, "Would you like", 0) >= 0)
         {
             response = transformWouldYouLikeStatement(statement);
+        }
+        else if (findPhrase(statement, "I dislike", 0) >= 0)
+        {
+            response = transformIDontLikeStatement(statement);
+        }
+        else if(findPhrase(statement, teacherName, 0) >=0){
+            response = transformTeacherStatement(statement);
         }
         else
         {
@@ -149,45 +204,5 @@ public class Magpie3
     public String getGreeting()
     {
         return "Hello, let's talk. Type in \"Bye\" to end our chat";
-    }
-
-
-    /**
-     * Pick a default response to use if nothing else fits.
-     * @return a non-committal string
-     */
-    private String getRandomResponse()
-    {
-        final int NUMBER_OF_RESPONSES = 6;
-
-        int whichResponse = (int)(Math.random() * NUMBER_OF_RESPONSES);
-        String response = "";
-
-        if (whichResponse == 0)
-        {
-            response = "Interesting.";
-        }
-        else if (whichResponse == 1)
-        {
-            response = "Okay.";
-        }
-        else if (whichResponse == 2)
-        {
-            response = "I haven't heard that before.";
-        }
-        else if (whichResponse == 3)
-        {
-            response = "What else could you tell me about that?";
-        }
-        else if (whichResponse == 4)
-        {
-            response = "Where did you hear that?";
-        }
-        else if (whichResponse == 5)
-        {
-            response = "Please, go on.";
-        }
-
-        return response;
     }
 }
