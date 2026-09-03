@@ -42,8 +42,13 @@ public class TestFractions
         System.out.println();
     }
 
+
     public static void main(String[] args)
     {
+        Fraction f = new Fraction(1, 3);
+
+
+
         testConstructors();
         testArithmetic();
         testValues();

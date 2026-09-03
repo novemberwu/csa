@@ -4,7 +4,23 @@ import java.util.UUID;
 
 public class ReviewClient {
     public static void main(String[] args){
-        ProductReview pr = new ProductReview(4, "rachel", UUID.randomUUID().toString());
+        Book book = new Book();
+
+
+
+
+        ProductReview review = new ProductReview(5,"rachelwu","keyboard");
+        int r = review.getRating();
+
+
+        System.out.println(r);
+
+        review.setText("This is great");
+        System.out.println(review.getText());
+
+
+
+
 
     }
 }

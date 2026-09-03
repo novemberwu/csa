@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class ArrayInsert {
 
+    public static void insertion(int[] array, int newItem, int lastIndex){
+
+
+    }
+
     public static int findPos(int[] array , int target){
         int i =0;
         for(; i < array.length; i++){
@@ -28,11 +33,11 @@ public class ArrayInsert {
 
     public static void main(String[] args){
         int[] array = {1, 1, 2, 3, 8, 13, -1, -1};
-
+        System.out.println();
         Arrays.stream(array).forEach(t -> System.out.print(t + " "));
-        int index = findPos(array, 5);
-        System.out.println("\ninsert position:" + index);
-        insert(array,5, index,  5);
+        insertion(array, 0,5);
+        System.out.println();
+
         Arrays.stream(array).forEach(t -> System.out.print(t + " "));
 
     }
