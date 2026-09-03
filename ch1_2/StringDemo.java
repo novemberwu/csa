@@ -14,6 +14,7 @@ public class StringDemo {
 
         s = s + 9;
 
+        System.out.println(s);
 
         s = "99";
         int a = Integer.valueOf(s);
